@@ -22,7 +22,7 @@ export default function Home() {
 
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-green-600 mb-4">Mission</h2>
-          <p>Our mission is to act as a bridge that fills the gap in society's socio-economic development by providing assistance to ensure equal access to quality education, food security, environmental sustainability, and gender equality.</p>
+          <p>Our mission is to act as a bridge that fills the gap in society&apos;s socio-economic development by providing assistance to ensure equal access to quality education, food security, environmental sustainability, and gender equality.</p>
         </section>
 
         <section className="mb-10">
