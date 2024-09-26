@@ -1,20 +1,15 @@
-"use client";
-
 import React from "react";
-import Image from "next/image";
-import faid1 from "@/../public/images/faid 1.jpg";
+import Image from "next/image"
+import profileimg from "@/../public/images/faid 1.jpg"
 import faid2 from "@/../public/images/faid 2.jpg";
-import faid3 from "@/../public/images/faid3.jpg";
-import faid4 from "@/../public/images/faid 4.jpg";
-import faid5 from "@/../public/images/faid 5.jpg";
-import faid6 from "@/../public/images/faid 6.jpg";
-import faid7 from "@/../public/images/faid 7.jpg";
-import Card from "./components/Card";
+import faid3 from "@/../public/images/faid 3.jpg";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-100">
-      <header className="bg-gray-600 p-3 text-yellow-500">
+     
+
+      <header className="bg-grey-600 p-3 text-yellow">
         <h1 className="text-4xl font-bold text-center">
           Future For All In Development (FAID)
         </h1>
@@ -23,47 +18,27 @@ export default function Home() {
         </p>
       </header>
 
-      <main className="p-4 max-w-7xl mx-auto">
+      <main className="p-6 max-w-4xl mx-auto">
         <section className="mb-10">
-          <h2 className="text-2xl font-bold text-green-600 mb-4 text-center">
+          <h2 className="text-2xl font-bold text-green-600 mb-4">
             Organizational Profile
           </h2>
-          <div className="flex flex-wrap justify-center">
-            <Card
-              imageSrc={faid1}
-              title="Our Work in Food Security"
-              description="FAID is working towards promoting food security and improved livelihood at the household level and beyond."
-            />
-            <Card
-              imageSrc={faid2}
-              title="Education and Livelihood"
-              description="We collaborate with partners in the areas of education, climate change, gender equality, and livelihood improvement."
-            />
-            <Card
-              imageSrc={faid3}
-              title="Environmental Conservation"
-              description="FAID has implemented the 'Mtengo Wanga' project, focusing on environmental conservation through tree planting."
-            />
-          </div>
-        </section>
-
-        {/* Mission Image */}
-        <section className="mb-10">
-          <Image
-            src={faid4}
-            alt="FAID Mission Image"
-            className="w-full h-auto rounded-lg object-cover mb-4"
-          />
-        </section>
-
-        <section className="mb-10">
-          <h2 className="text-2xl font-bold text-green-600 mb-4">Mission</h2>
           <p>
-            Our mission is to act as a bridge that fills the gap in
-            society&apos;s socio-economic development by providing assistance to
-            ensure equal access to water and sanitation, quality education,
-            effective governance, food security, environmental sustainability,
-            and gender equality.
+            FAID is a local non-profit organization established in July 2015,
+            legally registered in April 2021 under the Trustee Incorporation
+            Act. Our aim is to promote food security, self-reliance, and
+            improved livelihood at the household level and beyond. FAID works
+            with partners who share our interest in the areas of education,
+            climate change, gender equality, and livelihood improvement.
+          </p>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold text-green-600 mb-4">Vision</h2>
+          <p>
+            Our vision is to become a champion organization for the achievements
+            of socio-economic development for all in our catchment area and
+            beyond.
           </p>
         </section>
 
@@ -121,8 +96,6 @@ export default function Home() {
           </ol>
         </section>
 
-       
-
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-green-600 mb-4">
             Core Values
@@ -159,21 +132,6 @@ export default function Home() {
       <footer className="bg-green-600 p-4 text-center text-white">
         <p>&copy; 2024 FAID. All Rights Reserved.</p>
       </footer>
-      {/* Custom CSS for scroll animation */}
-      <style jsx>{`
-        .animate-scroll {
-          animation: scroll 45s linear infinite;
-        }
-
-        @keyframes scroll {
-          0% {
-            transform: translateX(0%);
-          }
-          100% {
-            transform: translateX(-100%);
-          }
-        }
-      `}</style>
     </div>
   );
 }
