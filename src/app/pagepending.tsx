@@ -1,137 +1,132 @@
-import React from "react";
-import Image from "next/image"
-import profileimg from "@/../public/images/faid 1.jpg"
-import faid2 from "@/../public/images/faid 2.jpg";
-import faid3 from "@/../public/images/faid 3.jpg";
+import Image from "next/image";
 
-export default function Home() {
-  return (
-    <div className="min-h-screen bg-gray-100">
-     
-
-      <header className="bg-grey-600 p-3 text-yellow">
-        <h1 className="text-4xl font-bold text-center">
-          Future For All In Development (FAID)
-        </h1>
-        <p className="mt-2 text-lg text-center">
-          Working towards food security, self-reliance, and improved livelihoods
-        </p>
-      </header>
-
-      <main className="p-6 max-w-4xl mx-auto">
-        <section className="mb-10">
-          <h2 className="text-2xl font-bold text-green-600 mb-4">
-            Organizational Profile
-          </h2>
-          <p>
-            FAID is a local non-profit organization established in July 2015,
-            legally registered in April 2021 under the Trustee Incorporation
-            Act. Our aim is to promote food security, self-reliance, and
-            improved livelihood at the household level and beyond. FAID works
-            with partners who share our interest in the areas of education,
-            climate change, gender equality, and livelihood improvement.
-          </p>
-        </section>
-
-        <section className="mb-10">
-          <h2 className="text-2xl font-bold text-green-600 mb-4">Vision</h2>
-          <p>
-            Our vision is to become a champion organization for the achievements
-            of socio-economic development for all in our catchment area and
-            beyond.
-          </p>
-        </section>
-
-        <section className="mb-10">
-          <h2 className="text-2xl font-bold text-green-600 mb-4">Mission</h2>
-          <p>
-            Our mission is to act as a bridge that fills the gap in
-            society&apos;s socio-economic development by providing assistance to
-            ensure equal access to water and sanitation, quality education,
-            effective governance, food security, environmental sustainability,
-            and gender equality.
-          </p>
-        </section>
-        <section className="mb-10">
-          <h2 className="text-2xl font-bold text-green-600 mb-4">
-            FAID Objectives
-          </h2>
-          <ol className="list-decimal list-inside p-2">
-            <li>
-              To ensure effective governance and management practices are
-              implemented in the conservation and protection of the environment,
-              including natural resources and biodiversity, in order to achieve
-              long-term sustainability and resilience.
-            </li>
-
-            <li>
-              Promoting disaster risk management by enhancing access to quality
-              education for all countywide.
-            </li>
-
-            <li>
-              Increasing the empowerment of women, youth, and vulnerable groups
-              by promoting access to vocational skills like tailoring, metal
-              fabrication, and construction.
-            </li>
-            <li>
-              Promoting environmental sustainability through afforestation,
-              forest conservation, and management, as well as mental health
-              awareness.
-            </li>
-            <li>
-              Promoting access to improved sanitation and water by drilling,
-              maintaining, and rehabilitating boreholes.
-            </li>
-            <li>
-              Increasing agricultural production, productivity, and nutrition,
-              as well as improving the diet and health of children under five to
-              combat malnutrition.
-            </li>
-            <li>
-              Creating a positive environment for the collective spread of the
-              Gospel, mindset change, and productivity by empowering
-              disadvantaged communities.
-            </li>
-          </ol>
-        </section>
-
-        <section className="mb-10">
-          <h2 className="text-2xl font-bold text-green-600 mb-4">
-            Core Values
-          </h2>
-          <ul className="list-disc ml-6">
-            <li>Solidarity</li>
-            <li>Favour</li>
-            <li>Patience</li>
-            <li>Integrity</li>
-          </ul>
-        </section>
-
-        <section className="mb-10">
-          <h2 className="text-2xl font-bold text-green-600 mb-4">
-            FAID Experiences
-          </h2>
-          <p>
-            Over the past five years, FAID has implemented projects that have
-            positively impacted the community. One of our key initiatives is the
-            Environmental Conservation and Management (Mtengo Wanga) project,
-            which has been running in the Chikwawa district for the past three
-            years. This project involves planting and taking care of trees in
-            the community.
-          </p>
-          <p>
-            We have also conducted workshops on environmental conservation with
-            youths in the Chikwawa district community and formed a youth farm
-            club. The club operates an irrigation scheme, where the youth grow
-            vegetables and other viable crops to promote sustainability.
-          </p>
-        </section>
-      </main>
-
-      <footer className="bg-green-600 p-4 text-center text-white">
-        <p>&copy; 2024 FAID. All Rights Reserved.</p>
-      </footer>
+<div id="default-carousel" className="relative w-full" data-carousel="slide">
+  <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+    <div className="hidden duration-700 ease-in-out" data-carousel-item>
+      <Image
+        src="/docs/images/carousel/carousel-1.svg"
+        className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        alt="..."
+      />
     </div>
-  );
-}
+
+    <div className="hidden duration-700 ease-in-out" data-carousel-item>
+      <Image
+        src="/docs/images/carousel/carousel-2.svg"
+        className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        alt="..."
+      />
+    </div>
+
+    <div className="hidden duration-700 ease-in-out" data-carousel-item>
+      <Image
+        src="/docs/images/carousel/carousel-3.svg"
+        className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        alt="..."
+      />
+    </div>
+
+    <div className="hidden duration-700 ease-in-out" data-carousel-item>
+      <Image
+        src="/docs/images/carousel/carousel-4.svg"
+        className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        alt="..."
+      />
+    </div>
+
+    <div className="hidden duration-700 ease-in-out" data-carousel-item>
+      <Image
+        src="/docs/images/carousel/carousel-5.svg"
+        className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        alt="..."
+      />
+    </div>
+  </div>
+
+  <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+    <button
+      type="button"
+      className="w-3 h-3 rounded-full"
+      aria-current="true"
+      aria-label="Slide 1"
+      data-carousel-slide-to="0"
+    ></button>
+    <button
+      type="button"
+      className="w-3 h-3 rounded-full"
+      aria-current="false"
+      aria-label="Slide 2"
+      data-carousel-slide-to="1"
+    ></button>
+    <button
+      type="button"
+      className="w-3 h-3 rounded-full"
+      aria-current="false"
+      aria-label="Slide 3"
+      data-carousel-slide-to="2"
+    ></button>
+    <button
+      type="button"
+      className="w-3 h-3 rounded-full"
+      aria-current="false"
+      aria-label="Slide 4"
+      data-carousel-slide-to="3"
+    ></button>
+    <button
+      type="button"
+      className="w-3 h-3 rounded-full"
+      aria-current="false"
+      aria-label="Slide 5"
+      data-carousel-slide-to="4"
+    ></button>
+  </div>
+
+  <button
+    type="button"
+    className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+    data-carousel-prev
+  >
+    <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+      <svg
+        className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 6 10"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 1 1 5l4 4"
+        />
+      </svg>
+      <span className="sr-only">Previous</span>
+    </span>
+  </button>
+  <button
+    type="button"
+    className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+    data-carousel-next
+  >
+    <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+      <svg
+        className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 6 10"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m1 9 4-4-4-4"
+        />
+      </svg>
+      <span className="sr-only">Next</span>
+    </span>
+  </button>
+</div>;

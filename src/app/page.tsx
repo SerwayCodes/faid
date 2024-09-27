@@ -2,14 +2,15 @@
 
 import React from "react";
 import Image from "next/image";
-import faid1 from "@/../public/images/faid 1.jpg";
-import faid2 from "@/../public/images/faid 2.jpg";
+import faid1 from "@/../public/images/faid1.jpg";
+import faid2 from "@/../public/images/faid2.jpg";
 import faid3 from "@/../public/images/faid3.jpg";
-import faid4 from "@/../public/images/faid 4.jpg";
-import faid5 from "@/../public/images/faid 5.jpg";
-import faid6 from "@/../public/images/faid 6.jpg";
-import faid7 from "@/../public/images/faid 7.jpg";
+import faid4 from "@/../public/images/faid4.jpg";
+// import faid5 from "@/../public/images/faid5.jpg";
+// import faid6 from "@/../public/images/faid6.jpg";
+// import faid7 from "@/../public/images/faid7.jpg";
 import Card from "./components/Card";
+import Corousel from "./components/CarouselWithContent"
 
 export default function Home() {
   return (
@@ -23,7 +24,7 @@ export default function Home() {
         </p>
       </header>
 
-      <main className="p-4 max-w-7xl mx-auto">
+      <main className="p-10 max-w-8xl mx-auto">
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-green-600 mb-4 text-center">
             Organizational Profile
@@ -46,7 +47,6 @@ export default function Home() {
             />
           </div>
         </section>
-
         {/* Mission Image */}
         <section className="mb-10">
           <Image
@@ -55,7 +55,6 @@ export default function Home() {
             className="w-full h-auto rounded-lg object-cover mb-4"
           />
         </section>
-
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-green-600 mb-4">Mission</h2>
           <p>
@@ -66,7 +65,6 @@ export default function Home() {
             and gender equality.
           </p>
         </section>
-
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-green-600 mb-4">Mission</h2>
           <p>
@@ -120,8 +118,9 @@ export default function Home() {
             </li>
           </ol>
         </section>
-
-       
+        <section className="">
+          <Corousel />
+        </section>
 
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-green-600 mb-4">
@@ -134,7 +133,6 @@ export default function Home() {
             <li>Integrity</li>
           </ul>
         </section>
-
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-green-600 mb-4">
             FAID Experiences
@@ -160,20 +158,6 @@ export default function Home() {
         <p>&copy; 2024 FAID. All Rights Reserved.</p>
       </footer>
       {/* Custom CSS for scroll animation */}
-      <style jsx>{`
-        .animate-scroll {
-          animation: scroll 45s linear infinite;
-        }
-
-        @keyframes scroll {
-          0% {
-            transform: translateX(0%);
-          }
-          100% {
-            transform: translateX(-100%);
-          }
-        }
-      `}</style>
     </div>
   );
 }
