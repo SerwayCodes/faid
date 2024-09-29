@@ -12,10 +12,10 @@ import Corousel from "../components/CarouselWithContent";
 export default function Home() {
   return (
     <div className="w-full bg-gray-100">
-      <div className="text-yellow-500">
+      <div>
       <div className="container mx-auto">
         
-          <header className="bg-gray-600 ">
+          <header className="bg-gray-600 text-green-500 ">
             <h1 className="text-4xl font-bold text-center">
               Future For All In Development (FAID)
             </h1>

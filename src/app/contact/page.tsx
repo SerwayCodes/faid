@@ -8,10 +8,11 @@ const Contact = () => {
     message: "",
   });
 
-  const handleChange = (e: { target: { name: any; value: any; }; }) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-  };
+};
+
 
   const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
