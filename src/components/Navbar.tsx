@@ -10,19 +10,23 @@ const Navbar = () => {
   const links = [
     {
       id: 1,
-      link: "home",
+      link: "/",
+      label: "Home",
     },
     {
       id: 2,
-      link: "about Us",
+      link: "/about",
+      label: "About Us",
     },
     {
       id: 3,
-      link: "contact",
+      link: "/contact",
+      label: "Contact",
     },
     {
       id: 4,
-      link: "donate",
+      link: "/updates",
+      label: "Updates",
     },
   ];
 
@@ -36,19 +40,16 @@ const Navbar = () => {
             alt="Logo"
             width={70} // Set the desired width
             height={70} // Set the desired height
-            className="rounded" 
-            objectFit="cover"
+            className="rounded"
+            
           />
         </div>
         {/* Full Text for larger screens */}
         <div className="hidden md:block ml-2">
           <h1 className="text-2xl font-bold">
-            Future For All In Development (FAID)
+          FAID
           </h1>
-          <p className="text-sm">
-            Working towards food security, self-reliance, and improved
-            livelihoods
-          </p>
+          
         </div>
 
         {/* Short Text for smaller screens */}
@@ -61,12 +62,12 @@ const Navbar = () => {
         </div>
 
         <ul className="hidden md:flex">
-          {links.map(({ id, link }) => (
+          {links.map(({ id, link, label }) => (
             <li
               key={id}
               className="nav-links px-4 cursor-pointer capitalize font-medium text-white hover:scale-105 hover:text-grey-900 duration-200 link-underline"
             >
-              <Link href={link}>{link}</Link>
+              <Link href={link}>{label}</Link>
             </li>
           ))}
         </ul>
@@ -80,13 +81,13 @@ const Navbar = () => {
 
         {nav && (
           <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
-            {links.map(({ id, link }) => (
+            {links.map(({ id, link, label }) => (
               <li
                 key={id}
                 className="px-4 cursor-pointer capitalize py-6 text-4xl"
               >
                 <Link onClick={() => setNav(!nav)} href={link}>
-                  {link}
+                  {label}
                 </Link>
               </li>
             ))}
