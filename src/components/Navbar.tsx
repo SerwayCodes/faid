@@ -22,13 +22,13 @@ const Navbar = () => {
     },
     {
       id: 4,
-      link: "faq",
+      link: "donate",
     },
   ];
 
   return (
     <div className="p-3 mx-auto bg-green-600">
-      <div className="flex justify-between items-center w-full h-20 px-4 text-white nav">
+      <div className=" container flex justify-evenly items-center  w-full h-20 px-2 text-white nav">
         <div className="flex items-center">
           {/* Image logo from public/images/icon.png */}
           <Image
@@ -37,6 +37,7 @@ const Navbar = () => {
             width={70} // Set the desired width
             height={70} // Set the desired height
             className="rounded" 
+            objectFit="cover"
           />
         </div>
         {/* Full Text for larger screens */}
