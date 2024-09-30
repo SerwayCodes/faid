@@ -13,9 +13,9 @@ export default function Home() {
   return (
     <div className="w-full bg-gray-100">
       <div>
-      <div className="container mx-auto">
+      <div className=" w-full  mx-auto">
         
-          <header className="bg-gray-600 text-green-500 ">
+          <header className="bg-gray-600 text-green-500 p-2">
             <h1 className="text-4xl font-bold text-center">
               Future For All In Development (FAID)
             </h1>
@@ -24,13 +24,13 @@ export default function Home() {
             </p>
           </header>
 
-          <main>
+          <main >
             {/* Cards Section */}
             <section className="bg-yellow-500 mb-10 py-6">
               <h2 className="text-2xl font-bold text-green-600 mb-6 text-center">
                 Organizational Profile
               </h2>
-              <div className="flex flex-wrap justify-center gap-6">
+              <div className="flex flex-row flex-wrap justify-center gap-6">
                 <Card
                   imageSrc={faid1}
                   title="Our Work in Food Security"
@@ -50,7 +50,7 @@ export default function Home() {
             </section>
 
             {/* Mission Image */}
-            <section className="mb-10">
+            <section className="mb-10 p-2">
               <Image
                 src={faid4}
                 alt="FAID Mission Image"
@@ -59,7 +59,7 @@ export default function Home() {
             </section>
 
             {/* Mission Section */}
-            <section className="mb-10">
+            <section className="mb-10 p-2">
               <h2 className="text-2xl font-bold text-green-600 mb-4">Mission</h2>
               <p>
                 Our mission is to act as a bridge that fills the gap in society&apos;s socio-economic development by providing assistance to ensure equal access to water and sanitation, quality education, effective governance, food security, environmental sustainability, and gender equality.
@@ -67,7 +67,7 @@ export default function Home() {
             </section>
 
             {/* Objectives Section */}
-            <section className="mb-10">
+            <section className="mb-10 p-2">
               <h2 className="text-2xl font-bold text-green-600 mb-4">FAID Objectives</h2>
               <ol className="list-decimal list-inside p-2">
                 <li>
@@ -95,12 +95,12 @@ export default function Home() {
             </section>
 
             {/* Carousel Section */}
-            <section className="mb-10">
+            <section className="mb-10 p-2">
               <Corousel />
             </section>
 
             {/* Core Values Section */}
-            <section className="mb-10">
+            <section className="mb-10 p-2">
               <h2 className="text-2xl font-bold text-green-600 mb-4">Core Values</h2>
               <ul className="list-disc ml-6">
                 <li>Solidarity</li>
@@ -111,7 +111,7 @@ export default function Home() {
             </section>
 
             {/* Experiences Section */}
-            <section className="mb-10">
+            <section className="mb-10 p-2">
               <h2 className="text-2xl font-bold text-green-600 mb-4">FAID Experiences</h2>
               <p>
                 Over the past five years, FAID has implemented projects that have positively impacted the community. One of our key initiatives is the Environmental Conservation and Management (Mtengo Wanga) project, which has been running in the Chikwawa district for the past three years. This project involves planting and taking care of trees in the community.

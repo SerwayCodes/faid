@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <div className="p-3 mx-auto bg-green-600">
-      <div className=" container flex justify-evenly items-center  w-full h-20 px-2 text-white nav">
+      <div className="flex justify-evenly items-center  w-full h-20 px-2 text-white nav">
         <div className="flex items-center">
           {/* Image logo from public/images/icon.png */}
           <Image
