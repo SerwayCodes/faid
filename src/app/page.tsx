@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import faid1 from "@/../public/images/faid1.jpg";
 import faid2 from "@/../public/images/faid2.jpg";
@@ -8,8 +8,20 @@ import faid3 from "@/../public/images/faid3.jpg";
 import faid4 from "@/../public/images/faid4.jpg";
 import Card from "../components/Card";
 import Corousel from "../components/CarouselWithContent";
+import WelcomeModal from "../components/WelcomeModal";
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false); // Modal state
+
+  // Open the modal when the component mounts
+  useEffect(() => {
+    setIsModalOpen(true);
+  }, []);
+
+  // Close the modal
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <div className="w-full bg-gray-100">
       <div className=" w-full mx-auto">
@@ -25,11 +37,11 @@ export default function Home() {
           </header>
         </div>
 
-        <div className="px-2 w-full bg-yellow-200 ">
+        <div className=" w-full bg-yellow-200 ">
           {/* Cards Section */}
 
-          <div className="px-2 max-w-6xl mx-auto">
-            <section className="mb-10 py-6">
+          <div className="px-2 max-w-7xl mx-auto">
+            <section className="mb-10 py-3">
               <h2 className="text-2xl font-bold text-green-600 mb-6 text-center">
                 Organizational Profile
               </h2>
@@ -157,8 +169,7 @@ export default function Home() {
               grow vegetables and other viable crops to promote sustainability.
             </p>
           </section>
-
-         
+          {isModalOpen && <WelcomeModal onClose={handleCloseModal} />}
         </div>
       </div>
     </div>
