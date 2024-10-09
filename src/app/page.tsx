@@ -11,11 +11,14 @@ import Corousel from "../components/CarouselWithContent";
 import WelcomeModal from "../components/WelcomeModal";
 
 export default function Home() {
-  const [isModalOpen, setIsModalOpen] = useState(false); // Modal state
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Open the modal when the component mounts
   useEffect(() => {
-    setIsModalOpen(true);
+    const hasVisited = localStorage.getItem("hasVisited");
+    if (!hasVisited) {
+      setIsModalOpen(true);
+      localStorage.setItem("hasVisited", "true");
+    }
   }, []);
 
   // Close the modal
@@ -67,15 +70,6 @@ export default function Home() {
         </div>
 
         <div className="px-2 max-w-6xl mx-auto">
-          {/* Mission Image */}
-          <section className="mb-10 p-2">
-            <Image
-              src={faid4}
-              alt="FAID Mission Image"
-              className="w-full h-auto rounded-lg object-cover mb-4"
-            />
-          </section>
-
           {/* Mission Section */}
           <section className="mb-10 p-2">
             <h2 className="text-2xl font-bold text-green-600 mb-4">Mission</h2>
@@ -86,6 +80,25 @@ export default function Home() {
               effective governance, food security, environmental sustainability,
               and gender equality.
             </p>
+          </section>
+
+          {/* Mission Image */}
+          <section className="mb-10 p-2">
+            <figure>
+              <Image
+                src={faid4}
+                alt="FAID Mission Image"
+                className="w-full h-auto rounded-lg object-cover mb-4"
+              />
+            </figure>
+            <figcaption className="text-center mt-2 text-sm text-gray-500">
+              <p>
+                Borehole drilled in mwazaonga village intiative with FAID with
+                support from our partners Water for People. The borehole is
+                serving villages like Chindoko , Nkhwangwa , Tsegulani and
+                Khubulani
+              </p>
+            </figcaption>
           </section>
 
           {/* Objectives Section */}
