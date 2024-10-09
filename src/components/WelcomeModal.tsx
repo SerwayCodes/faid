@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React  from "react";
 
 interface WelcomeModalProps {
   onClose: () => void; // Function to close the modal
