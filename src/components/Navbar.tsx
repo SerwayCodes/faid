@@ -79,7 +79,7 @@ const Navbar = () => {
 
         {/* Mobile Menu (sliding from the left) */}
         <div
-          className={`fixed bg-gradient-to-r from-purple-500 to-pink-500 top-0 left-0 w-full h-screen  text-gray-500 flex flex-col justify-center items-center transition-transform duration-500 ease-out transform ${
+          className={`fixed bg-gradient-to-r from-purple-500 to-pink-500 top-0 left-0 w-full h-screen  text-white-500 flex flex-col justify-center items-center transition-transform duration-500 ease-out transform ${
             nav ? "translate-x-0" : "-translate-x-full"
           }`}
         >

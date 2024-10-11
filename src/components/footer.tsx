@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="flex justify-center space-x-6">
           {/* Facebook */}
           <a
-            href="https://www.facebook.com/faidmalawi"
+            href="https://web.facebook.com/profile.php?id=61566860078721"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-gray-300"
