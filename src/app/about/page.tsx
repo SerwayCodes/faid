@@ -11,12 +11,13 @@ import faid7 from "@/../public/images/Chitani.jpg";
 import faid8 from "@/../public/images/Stephen.jpg";
 import faid9 from "@/../public/images/synet.jpg";
 import faid10 from "@/../public/images/pumbwa.jpg";
+import faid11 from "@/../public/images/driver.jpg";
 const AboutUs = () => {
   const teamMembers = [
     {
       name: "Rosario Kalavina",
       role: "Executive Director",
-      bio: "Rosario Kalavina is the Director of FAID, leading initiatives in food security, environmental conservation, and education. He has over 10 years of experience in community development.",
+      bio: "Rosario Kalavina is the Executive Director of Future for All in Development (FAID), a non-profit focused on community development and social welfare. He holds a Bachelor's in Education Humanities from the University of Malawi, along with diplomas in Community Development, Project Management, and Human Resources. With extensive experience in managing impactful projects like Mtengo Wanga, Back to Life (Water and Sanitation), and Phungu Wanga, Rosario drives positive change in marginalized communities. His dedication to social justice and community empowerment makes him a leading figure in development work.",
       imageSrc: faid1, // Path to the image
     },
     {
@@ -51,7 +52,7 @@ const AboutUs = () => {
     },
     {
       name: "Chitani Tobias",
-      role: "Legal And Partnership affairs manager",
+      role: "Legal And Partnership Affairs Manager",
       bio: "Chitani Tobias is a second-year PhD student in Geoinformatics (GIS) at Mzuzu University. He holds a Master's in Geography and Environmental Management, along with a Bachelor's in Education in Humanities (Geography and Social Studies). Chitani is a lecturer at the University of Livingstonia and serves as a football referee in the Elite TNM Super League",
       imageSrc: faid7,
     },
@@ -64,15 +65,21 @@ const AboutUs = () => {
 
     {
       name: "Charles Pumbwa",
-      role: "Faid Project Manager",
-      bio: "Bachelor's in Social Work, Project Management, Monitoring & Evaluation (DMI Mangochi) Diploma in Biomedical Engineering (Polytechnic/MUBAS) Diploma in Community Development (Soche Technical College) 10+ years in project management, community development, and biomedical engineering Worked with renowned organizations (Banja LA Mtsogolo, CADECOM, FHI, MSH, Airtel, Baylor College, PCI, Save the Children) Held key roles: Community Outreach Assistant, Project Monitoring Officer Project Management Monitoring & Evaluation Biomedical Engineering Community Development Communication Problem-Solving Dedicated professional committed to advancing community health and well-being through impactful projects. Proven track record of successful project management and passion for creating positive change. Available for collaboration opportunities and inquiries about community development work.",
+      role: "FAID Project Manager",
+      bio: "A dedicated professional with over 10 years of experience in project management, community development, and biomedical engineering. Holds a Bachelor's in Social Work, and diplomas in Project Management, Monitoring & Evaluation, Biomedical Engineering, and Community Development. Worked with organizations like Banja La Mtsogolo, Save the Children, FHI, and more in roles such as Community Outreach Assistant and Project Monitoring Officer. Skilled in communication, problem-solving, and advancing community health. Passionate about driving impactful projects and open to collaboration opportunities in community development.",
       imageSrc: faid10,
     },
     {
       name: "Synet W Maonekedwe",
-      role: "ICT Manager",
+      role: "FAID ICT Manager",
       bio: "Synet Maonekadwe is currently serving as the ICT Manager. He holds an Honours Bachelor's degree in Electronics and Computer Engineering",
       imageSrc: faid9,
+    },
+    {
+      name: "Joseph Chilumba",
+      role: "FAID Driver And Chair For FAID Youth",
+      bio: "Joseph Chilumba currently serving as FAID Driver And Chair For FAID Youth",
+      imageSrc: faid11,
     },
   ];
 
