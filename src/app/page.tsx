@@ -7,13 +7,13 @@ import faid2 from "@/../public/images/faid2.jpg";
 import faid3 from "@/../public/images/faid3.jpg";
 import faid4 from "@/../public/images/faid4.jpg";
 import Card from "../components/Card";
-import Corousel from "../components/CarouselWithContent";
+import Carousel from "../components/CarouselWithContent";
 import WelcomeModal from "../components/WelcomeModal";
 import "animate.css";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const headingsRefs = useRef([]); // Store references for each heading
+  const headingsRefs = useRef<(HTMLHeadingElement | null)[]>([]); // Correctly typed ref
 
   useEffect(() => {
     // Show modal on first visit
@@ -62,27 +62,29 @@ export default function Home() {
 
   return (
     <div className="w-full bg-gray-100">
-      <div className=" w-full mx-auto">
+      <div className="w-full mx-auto">
         <div className="w-full bg-gray-600">
-          <header className=" text-green-500 p-2">
-            <h4 className="text-4xl font-italic text-center">
+          <header className="text-green-500 p-2">
+            <h4 className="text-4xl italic font-bold text-center">
               Working towards food security, self-reliance, and improved
               livelihoods
             </h4>
           </header>
         </div>
 
-        <div className=" w-full bg-yellow-200 ">
+        <div className="w-full bg-yellow-200">
           {/* Cards Section */}
-
           <div className="px-2 max-w-7xl mx-auto">
             <section className="mb-10 py-3">
               <h2
-                ref={(el) => (headingsRefs.current[0] = el)} // Ref for Intersection Observer
+                ref={(el) => {
+                  headingsRefs.current[0] = el; // Assign the ref
+                }}
                 className="text-2xl font-bold text-green-600 mb-6 text-center"
               >
                 Organizational Profile
               </h2>
+
               <div className="flex flex-row flex-wrap justify-center gap-6">
                 <Card
                   imageSrc={faid1}
@@ -108,17 +110,17 @@ export default function Home() {
           {/* Mission Section */}
           <section className="mb-10 p-2">
             <h2
-              ref={(el) => (headingsRefs.current[1] = el)} // Ref for Intersection Observer
+              ref={(el) => (headingsRefs.current[1] = el)!} // Ref for Intersection Observer
               className="text-2xl font-bold text-green-600 mb-4"
             >
               Mission
             </h2>
             <p>
-              Our mission is to act as a bridge that fills the gap in
-              society&apos;s socio-economic development by providing assistance
-              to ensure equal access to water and sanitation, quality education,
-              effective governance, food security, environmental sustainability,
-              and gender equality.
+              Our mission is to act as a bridge that fills the gap in society's
+              socio-economic development by providing assistance to ensure equal
+              access to water and sanitation, quality education, effective
+              governance, food security, environmental sustainability, and
+              gender equality.
             </p>
           </section>
 
@@ -133,7 +135,7 @@ export default function Home() {
             </figure>
             <figcaption className="text-center mt-2 text-sm text-gray-500">
               <p>
-                Borehole drilled in mwazaonga village initiative with FAID with
+                Borehole drilled in Mwazaonga village initiative with FAID, with
                 support from our partners Water for People. The borehole is
                 serving villages like Chindoko, Nkhwangwa, Tsegulani, and
                 Khubulani.
@@ -153,8 +155,8 @@ export default function Home() {
               <li>
                 To ensure effective governance and management practices are
                 implemented in the conservation and protection of the
-                environment, including natural resources and biodiversity, in
-                order to achieve long-term sustainability and resilience.
+                environment, including natural resources and biodiversity, to
+                achieve long-term sustainability and resilience.
               </li>
               <li>
                 Promoting disaster risk management by enhancing access to
@@ -189,7 +191,7 @@ export default function Home() {
 
           {/* Carousel Section */}
           <section className="mb-10 p-2">
-            <Corousel />
+            <Carousel />
           </section>
 
           {/* Core Values Section */}
@@ -232,6 +234,7 @@ export default function Home() {
             </p>
           </section>
 
+          {/* Modal */}
           {isModalOpen && <WelcomeModal onClose={handleCloseModal} />}
         </div>
       </div>
