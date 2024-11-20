@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import faid1 from "@/../public/images/faid1.jpg";
 import faid2 from "@/../public/images/faid2.jpg";
@@ -9,34 +9,66 @@ import faid4 from "@/../public/images/faid4.jpg";
 import Card from "../components/Card";
 import Corousel from "../components/CarouselWithContent";
 import WelcomeModal from "../components/WelcomeModal";
+import "animate.css";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const headingsRefs = useRef([]); // Store references for each heading
 
   useEffect(() => {
+    // Show modal on first visit
     const hasVisited = localStorage.getItem("hasVisited");
     if (!hasVisited) {
       setIsModalOpen(true);
       localStorage.setItem("hasVisited", "true");
     }
+
+    // Intersection Observer to animate headings on scroll
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(
+              "animate__animated",
+              "animate__fadeInUp"
+            );
+          }
+        });
+      },
+      {
+        threshold: 0.5, // Trigger animation when 50% of the element is visible
+      }
+    );
+
+    headingsRefs.current.forEach((heading) => {
+      if (heading) {
+        observer.observe(heading);
+      }
+    });
+
+    return () => {
+      headingsRefs.current.forEach((heading) => {
+        if (heading) {
+          observer.unobserve(heading);
+        }
+      });
+    };
   }, []);
 
   // Close the modal
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
+
   return (
     <div className="w-full bg-gray-100">
       <div className=" w-full mx-auto">
         <div className="w-full bg-gray-600">
           <header className=" text-green-500 p-2">
-            <h1 className="text-4xl font-bold text-center">
-              Future For All In Development (FAID)
-            </h1>
-            <p className="mt-2 text-lg text-center">
+            <h4 className="text-4xl font-italic text-center">
               Working towards food security, self-reliance, and improved
               livelihoods
-            </p>
+            </h4>
           </header>
         </div>
 
@@ -45,7 +77,10 @@ export default function Home() {
 
           <div className="px-2 max-w-7xl mx-auto">
             <section className="mb-10 py-3">
-              <h2 className="text-2xl font-bold text-green-600 mb-6 text-center">
+              <h2
+                ref={(el) => (headingsRefs.current[0] = el)} // Ref for Intersection Observer
+                className="text-2xl font-bold text-green-600 mb-6 text-center"
+              >
                 Organizational Profile
               </h2>
               <div className="flex flex-row flex-wrap justify-center gap-6">
@@ -72,7 +107,12 @@ export default function Home() {
         <div className="px-2 max-w-6xl mx-auto">
           {/* Mission Section */}
           <section className="mb-10 p-2">
-            <h2 className="text-2xl font-bold text-green-600 mb-4">Mission</h2>
+            <h2
+              ref={(el) => (headingsRefs.current[1] = el)} // Ref for Intersection Observer
+              className="text-2xl font-bold text-green-600 mb-4"
+            >
+              Mission
+            </h2>
             <p>
               Our mission is to act as a bridge that fills the gap in
               society&apos;s socio-economic development by providing assistance
@@ -93,17 +133,20 @@ export default function Home() {
             </figure>
             <figcaption className="text-center mt-2 text-sm text-gray-500">
               <p>
-                Borehole drilled in mwazaonga village intiative with FAID with
+                Borehole drilled in mwazaonga village initiative with FAID with
                 support from our partners Water for People. The borehole is
-                serving villages like Chindoko , Nkhwangwa , Tsegulani and
-                Khubulani
+                serving villages like Chindoko, Nkhwangwa, Tsegulani, and
+                Khubulani.
               </p>
             </figcaption>
           </section>
 
           {/* Objectives Section */}
           <section className="mb-10 p-2">
-            <h2 className="text-2xl font-bold text-green-600 mb-4">
+            <h2
+              ref={(el) => (headingsRefs.current[2] = el)} // Ref for Intersection Observer
+              className="text-2xl font-bold text-green-600 mb-4"
+            >
               FAID Objectives
             </h2>
             <ol className="list-decimal list-inside p-2">
@@ -151,7 +194,10 @@ export default function Home() {
 
           {/* Core Values Section */}
           <section className="mb-10 p-2">
-            <h2 className="text-2xl font-bold text-green-600 mb-4">
+            <h2
+              ref={(el) => (headingsRefs.current[3] = el)} // Ref for Intersection Observer
+              className="text-2xl font-bold text-green-600 mb-4"
+            >
               Core Values
             </h2>
             <ul className="list-disc ml-6">
@@ -164,7 +210,10 @@ export default function Home() {
 
           {/* Experiences Section */}
           <section className="mb-10 p-2">
-            <h2 className="text-2xl font-bold text-green-600 mb-4">
+            <h2
+              ref={(el) => (headingsRefs.current[4] = el)} // Ref for Intersection Observer
+              className="text-2xl font-bold text-green-600 mb-4"
+            >
               FAID Experiences
             </h2>
             <p>
@@ -182,6 +231,7 @@ export default function Home() {
               grow vegetables and other viable crops to promote sustainability.
             </p>
           </section>
+
           {isModalOpen && <WelcomeModal onClose={handleCloseModal} />}
         </div>
       </div>

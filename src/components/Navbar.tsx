@@ -45,16 +45,14 @@ const Navbar = () => {
         </div>
         {/* Full Text for larger screens */}
         <div className="hidden md:block ml-2">
-          <h1 className="text-2xl font-bold">FAID</h1>
+          <h1 className="text-2xl font-bold">
+            FUTURE FOR ALL IN DEVELOPMENT (FAID)
+          </h1>
         </div>
 
         {/* Short Text for smaller screens */}
         <div className="md:hidden ml-2">
           <h1 className="text-2xl font-bold">FAID</h1>
-          <p className="text-xs">
-            Working towards food security, self-reliance, and improved
-            livelihoods
-          </p>
         </div>
 
         {/* Desktop Links */}

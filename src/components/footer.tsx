@@ -36,7 +36,7 @@ export default function Footer() {
 
           {/* Email */}
           <a
-            href="mailto:faidmalawi.org@gmail.com"
+            href="mailto:info@faidmalawi.com"
             className="text-white hover:text-gray-300"
             aria-label="Email"
           >
@@ -55,7 +55,7 @@ export default function Footer() {
 
         {/* Contact Information */}
         <div className="mt-4 text-sm">
-          <p>Contact us at: faidmalawi.org@gmail.com</p>
+          <p>Contact us at: info@faidmalawi.com</p>
           <p>Phone: +265 999 396 083</p>
         </div>
       </footer>
