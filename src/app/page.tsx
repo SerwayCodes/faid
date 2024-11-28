@@ -109,12 +109,7 @@ export default function Home() {
         <div className="px-2 max-w-6xl mx-auto">
           {/* Mission Section */}
           <section className="mb-10 p-2">
-            <h2
-              ref={(el) => (headingsRefs.current[1] = el)!} // Ref for Intersection Observer
-              className="text-2xl font-bold text-green-600 mb-4"
-            >
-              Mission
-            </h2>
+            <h2 className="text-2xl font-bold text-green-600 mb-4">Mission</h2>
             <p>
               Our mission is to act as a bridge that fills the gap in society's
               socio-economic development by providing assistance to ensure equal
@@ -145,10 +140,7 @@ export default function Home() {
 
           {/* Objectives Section */}
           <section className="mb-10 p-2">
-            <h2
-              ref={(el) => (headingsRefs.current[2] = el)} // Ref for Intersection Observer
-              className="text-2xl font-bold text-green-600 mb-4"
-            >
+            <h2 className="text-2xl font-bold text-green-600 mb-4">
               FAID Objectives
             </h2>
             <ol className="list-decimal list-inside p-2">
@@ -196,10 +188,7 @@ export default function Home() {
 
           {/* Core Values Section */}
           <section className="mb-10 p-2">
-            <h2
-              ref={(el) => (headingsRefs.current[3] = el)} // Ref for Intersection Observer
-              className="text-2xl font-bold text-green-600 mb-4"
-            >
+            <h2 className="text-2xl font-bold text-green-600 mb-4">
               Core Values
             </h2>
             <ul className="list-disc ml-6">
@@ -212,10 +201,7 @@ export default function Home() {
 
           {/* Experiences Section */}
           <section className="mb-10 p-2">
-            <h2
-              ref={(el) => (headingsRefs.current[4] = el)} // Ref for Intersection Observer
-              className="text-2xl font-bold text-green-600 mb-4"
-            >
+            <h2 className="text-2xl font-bold text-green-600 mb-4">
               FAID Experiences
             </h2>
             <p>

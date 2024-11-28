@@ -12,6 +12,8 @@ import faid8 from "@/../public/images/Stephen.jpg";
 import faid9 from "@/../public/images/synet.jpg";
 import faid10 from "@/../public/images/pumbwa.jpg";
 import faid11 from "@/../public/images/driver.jpg";
+import faid12 from "@/../public/images/GeraldNgwale.jpg";
+import faid13 from "@/../public/images/kwalapu.png";
 const AboutUs = () => {
   const teamMembers = [
     {
@@ -76,10 +78,22 @@ const AboutUs = () => {
       imageSrc: faid9,
     },
     {
+      name: "Ishmael Kwalapu",
+      role: "FAID Bonafide Member and Ambassador for Inclusive Affairs",
+      bio: "Currently serving as FAID bonafide member and Ambassador For Inclussive Affairs.Kwalapu holds Bachelors Of Education In Mathematics from the University Of Malawi.",
+      imageSrc: faid13,
+    },
+    {
       name: "Joseph Chilumba",
       role: "FAID Driver And Chair For FAID Youth",
       bio: "Joseph Chilumba currently serving as FAID Driver And Chair For FAID Youth",
       imageSrc: faid11,
+    },
+    {
+      name: "Gerald Ngwale",
+      role: "FAID' s Communication And Development Manager",
+      bio: "Gerald Ngwale holds a Bachelor of Arts in Media for Development from the University of Malawi. He is currently serving as FAID's Communication and Development Manager",
+      imageSrc: faid12,
     },
   ];
 
